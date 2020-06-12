@@ -4,18 +4,18 @@ A example app using React functional components to search for parking garages in
 
 ## Components
 
-ParkingGarages: contains the whole feature of filtering parking garages
-SearchPlace: contains input field to search for a parking garage by place
-SearchFilter: contains options to filter for parking garage
-ParkingGarageList: contains a list of parking garages
-ParkingGarageItem: contains parking garage information
+- ParkingGarages: contains the whole feature of filtering parking garages
+- SearchPlace: contains input field to search for a parking garage by place
+- SearchFilter: contains options to filter for parking garage
+- ParkingGarageList: contains a list of parking garages
+- ParkingGarageItem: contains parking garage information
 
 ## Data
 
-SearchPlace: dynamic data that changes over time (in this case user input)
-SearchFilter: dynamic data that changes over time (in this case user input)
-ParkingGarageList: static data from external source (json)
-ParkingGarageItem: static data from external source (json)
+- SearchPlace: dynamic data that changes over time (in this case user input)
+- SearchFilter: dynamic data that changes over time (in this case user input)
+- ParkingGarageList: static data from external source (json)
+- ParkingGarageItem: static data from external source (json)
 
 ## Challenge
 
