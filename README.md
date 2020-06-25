@@ -17,8 +17,14 @@ A example app using React functional components to search for parking garages in
 - ParkingGarageList: static data from external source (json)
 - ParkingGarageItem: static data from external source (json)
 
+External source is open data from RDW containing parking garage information: [Open Data Parkeren: PARKEERADRES](https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-PARKEERADRES/ygq4-hh5q)
+
 ## Challenge
 
-The challenge is to build with React functional components and React hooks above components with a correct component communication.
+The challenge is to build with React functional components and React hooks with a correct component communication.
 That means data flows down with props or data flows up with events between components.
 And having the state / data in the correct components.
+
+### Implementation
+
+This is a refactoring from the class component implementation: [Parking Garage class components](https://github.com/timothyveldhuizen/react-parking-garage-class)
