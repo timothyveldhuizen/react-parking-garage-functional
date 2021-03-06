@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import SearchPlace from './SearchPlace';
 import SearchFilter from './SearchFilter';
 import ParkingGarageList from './ParkingGarageList';
-// import dataParkingGarageList from '../data/DataParkingGarageList';
 
 function ParkingGarages() {
   const [dataParkingGarageList, setDataParkingGarageList] = useState([]);
