@@ -1,16 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SearchPlace from './SearchPlace';
 import SearchFilter from './SearchFilter';
 import ParkingGarageList from './ParkingGarageList';
-import dataParkingGarageList from '../data/DataParkingGarageList';
+// import dataParkingGarageList from '../data/DataParkingGarageList';
 
 function ParkingGarages() {
+  const [dataParkingGarageList, setDataParkingGarageList] = useState([]);
   const [searchPlace, setSearchPlace] = useState('')
   const [searchFilter, setSearchFilter] = useState({
     A: false,
     P: false,
     F: true,
   })
+
+  useEffect(() => {
+    fetchDataParkingGarageList();
+  }, []);
+
+  function fetchDataParkingGarageList() {
+    fetch('https://opendata.rdw.nl/resource/ygq4-hh5q.json')
+      .then(response => response.json())
+      .then(data => setDataParkingGarageList(data))
+  }
 
   function handleSearchFilterChange(filterItem, checked) {
     const currentFilter = searchFilter;
