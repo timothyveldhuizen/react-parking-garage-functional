@@ -19,10 +19,10 @@ function SearchFilter(props) {
         item => {
             const keys = Object.keys(item);
             const values = Object.values(item);
-            return <>
-                <label for={`searchfilter-${keys}`}>{values}</label>
+            return <div key={keys.toString()}>
+                <label htmlFor={`searchfilter-${keys}`}>{values}</label>
                 <input type="checkbox" id={`searchfilter-${keys}`} value={keys} checked={isChecked(keys)} onChange={handleParkingTypeFilterChange} />
-            </>
+            </div>
         }
     );
 

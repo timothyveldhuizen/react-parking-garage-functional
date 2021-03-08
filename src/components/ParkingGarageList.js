@@ -6,7 +6,7 @@ function ParkingGarageList(props) {
         .filter(item => item.place ? item.place.toLowerCase().includes(props.place.toLowerCase()) : false)
         .filter(item => Object.values(props.filter).indexOf(true) > -1 ? props.filter[item.parkingaddresstype] : false)
         .map(item => {
-            const listKey = item.parkingaddressreferencetype + item.parkingaddressreference + item.parkingaddresstype;
+            const listKey = Math.random().toString().substr(2, 8);
             return <ParkingGarageItem key={listKey} item={item} />
         }
         );

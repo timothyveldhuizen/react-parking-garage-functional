@@ -6,6 +6,7 @@ import { render, screen } from '@testing-library/react';
 import ParkingGarageItem from './ParkingGarageItem';
 
 // Should we have a before and after each like the react-dom unit test?
+// Answer: no with Jest as testing framework that supports afterEach this globally done automatically
 
 describe('render parking garage item', () => {
     it ('without a key and without a item prop', () => {

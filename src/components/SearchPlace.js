@@ -7,7 +7,7 @@ function SearchPlace(props) {
 
     return (
         <div>
-            <label for="searchplace">Search place</label>
+            <label htmlFor="searchplace">Search place</label>
             <input type="text" id="searchplace" value={props.searchInput} onChange={handleSearchTextChange}/>
         </div>
     );

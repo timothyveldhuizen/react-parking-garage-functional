@@ -7,20 +7,21 @@ import ParkingGarageItem from "./ParkingGarageItem";
 
 let container = null;
 
-beforeEach(() => {
-    // setup a DOM element as a render target
-    container = document.createElement("div");
-    document.body.appendChild(container);
-});
-
-afterEach(() => {
-     // cleanup on exiting
-     unmountComponentAtNode(container);
-     container.remove();
-     container = null;
-});
 
 describe('render parking garage item', () => {
+    beforeEach(() => {
+        // setup a DOM element as a render target
+        container = document.createElement("div");
+        document.body.appendChild(container);
+    });
+    
+    afterEach(() => {
+         // cleanup on exiting
+         unmountComponentAtNode(container);
+         container.remove();
+         container = null;
+    });
+    
     it ('without a key and without a item prop', () => {
         act(() => {
             render(<ParkingGarageItem />, container);
