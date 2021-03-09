@@ -34,7 +34,7 @@ describe('render parking garages', () => {
         expect(screen.getByRole('checkbox', { name: /Feitelijk adres/g }).checked).toBe(true)
     });
 
-    it('show number of results', async () => {
+    xit('show number of results', async () => {
         render(<ParkingGarages />);
         expect(screen.getByText('Number of results 0')).toBeInTheDocument(); // initially when rendered
         expect(await screen.findByText('Number of results 2')).toBeInTheDocument(); // when use effect hook is successful

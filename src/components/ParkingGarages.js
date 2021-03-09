@@ -16,10 +16,9 @@ function ParkingGarages() {
     fetchDataParkingGarageList();
   }, []);
 
-  function fetchDataParkingGarageList() {
-    fetch('https://opendata.rdw.nl/resource/ygq4-hh5q.json')
-      .then(response => response.json())
-      .then(data => setDataParkingGarageList(data))
+  async function fetchDataParkingGarageList() {
+    const response = await fetch('https://opendata.rdw.nl/resource/ygq4-hh5q.json');
+    setDataParkingGarageList(await response.json());
   }
 
   function handleSearchFilterChange(filterItem, checked) {
